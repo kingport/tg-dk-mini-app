@@ -7,7 +7,7 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import path from 'path';
 import svgr from 'vite-plugin-svgr';
 import legacy from '@vitejs/plugin-legacy';
-import mkcert from 'vite-plugin-mkcert';
+// import mkcert from 'vite-plugin-mkcert';
 
 // const inject = require('@rollup/plugin-inject');
 // const esbuildShim = require.resolve('node-stdlib-browser/helpers/esbuild/shim');
@@ -24,7 +24,7 @@ export default async ({ command, mode }: ConfigEnv) => {
       target: ['es2015'],
     },
     plugins: [
-      mkcert(),
+      // mkcert(),
       legacy({
         targets: ['defaults', 'not IE 11'],
         renderLegacyChunks: false,
