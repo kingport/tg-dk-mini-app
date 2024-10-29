@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/api/:match*", "destination": "https://ec2-b-a.ulab.eu.org/api/:match*" },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

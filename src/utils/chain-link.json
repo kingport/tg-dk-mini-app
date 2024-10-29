@@ -1,0 +1,230 @@
+{
+  "result": "Success",
+  "data": [
+    {
+      "natives_symbol": "BTC",
+      "name": "BTC",
+      "chain_id": 0,
+      "icon": "https://res.mct.club/chain/png/btc.png",
+      "tokens": [],
+      "multicall": "",
+      "multisend": "more-to-more,more-to-one,token-sender,batch-query-balance",
+      "scan": "https://mempool.space/",
+      "decimal": 8,
+      "eip1559": 0,
+      "testnet": 0,
+      "network_type": "btc",
+      "l2": 0
+    },
+    {
+      "natives_symbol": "ETH",
+      "name": "Ethereum",
+      "chain_id": 1,
+      "icon": "https://res.mct.club/chain/svg/eth.svg",
+      "tokens": [
+        {
+          "icon": "",
+          "name": "USDT",
+          "symbol": "USDT",
+          "decimal": 18,
+          "chain_id": 1,
+          "address": "0xdac17f958d2ee523a2206206994597c13d831ec7"
+        }
+      ],
+      "multicall": "0x5eb3fa2dfecdde21c950813c665e9364fa609bd2",
+      "multisend": "0x005Da41474EB93cfEa6FcC126e7bEAf467e96666",
+      "rpcs": [
+        "https://geth.mytokenpocket.vip",
+        "https://cloudflare-eth.com",
+        "https://1rpc.io/eth",
+        "https://rpc.ankr.com/eth",
+        "https://eth.llamarpc.com",
+        "https://eth.api.onfinality.io/public",
+        "https://ethereum.publicnode.com",
+        "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+        "https://rpc.flashbots.net",
+        "https://cloudflare-eth1111.com"
+      ],
+      "scan": "https://etherscan.io/",
+      "decimal": 18,
+      "eip1559": 1,
+      "testnet": 0,
+      "network_type": "evm",
+      "l2": 0
+    },
+    {
+      "natives_symbol": "BNB",
+      "name": "BNB Chain",
+      "chain_id": 56,
+      "icon": "https://res.mct.club/chain/svg/bsc.svg",
+      "tokens": [],
+      "multicall": "0x2B5EF9F7847AC40d928488463C6fbf0647B476Ce",
+      "multisend": "0xB2169f6f9e47eE4F742a8902B8d57d4478b66666",
+      "rpcs": [
+        "https://bsc-dataseed.binance.org",
+        "https://bsc-dataseed1.binance.org",
+        "https://bsc-dataseed2.binance.org",
+        "https://bsc-dataseed1.defibit.io",
+        "https://bsc-dataseed2.defibit.io",
+        "https://1rpc.io/bnb",
+        "https://node.onekey.so/bsc"
+      ],
+      "scan": "https://bscscan.com/",
+      "decimal": 18,
+      "eip1559": 0,
+      "testnet": 0,
+      "network_type": "evm",
+      "l2": 0
+    },
+    
+    {
+      "natives_symbol": "ETH",
+      "name": "Arbitrum",
+      "chain_id": 42161,
+      "icon": "https://res.mct.club/chain/svg/arbitrum.svg",
+      "tokens": [
+        {
+          "icon": "",
+          "name": "USDC",
+          "symbol": "USDC",
+          "decimal": 18,
+          "chain_id": 42161,
+          "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
+        }
+      ],
+      "multicall": "0x70355d77af00b7A297723c30d1af215a112b08e7",
+      "multisend": "0x5b10dF094Fe0439d48079c8af613317623456666",
+      "rpcs": [
+        "https://arb1.arbitrum.io/rpc",
+        "https://rpc.ankr.com/arbitrum",
+        "https://arbitrum.llamarpc.com",
+        "https://1rpc.io/arb",
+        "https://endpoints.omniatech.io/v1/arbitrum/one/public",
+        "https://arbitrum.blockpi.network/v1/rpc/public",
+        "https://arb.mytokenpocket.vip"
+      ],
+      "scan": "https://arbiscan.io/",
+      "decimal": 18,
+      "eip1559": 1,
+      "testnet": 0,
+      "network_type": "evm",
+      "l2": 1
+    },
+    {
+      "natives_symbol": "ETH",
+      "name": "zkSync Era",
+      "chain_id": 324,
+      "icon": "https://res.mct.club/chain/svg/zksync.svg",
+      "tokens": [
+        {
+          "icon": "",
+          "name": "USDC",
+          "symbol": "USDC",
+          "decimal": 18,
+          "chain_id": 324,
+          "address": "0x3355df6d4c9c3035724fd0e3914de96a5a83aaf4"
+        }
+      ],
+      "multicall": "0x82eA3E9d722dA5821551f72696C4C1Ad38E8a280",
+      "multisend": "0x2b26C7809c6bF5dd0717ec1b42E0ac8800E82143",
+      "rpcs": ["https://mainnet.era.zksync.io", "https://zksync2-mainnet.zksync.io"],
+      "scan": "https://explorer.zksync.io/",
+      "decimal": 18,
+      "eip1559": 0,
+      "testnet": 0,
+      "network_type": "evm",
+      "l2": 1
+    },
+    {
+      "natives_symbol": "ETH",
+      "name": "linea",
+      "chain_id": 59144,
+      "icon": "https://res.mct.club/chain/svg/linea.svg",
+      "tokens": [],
+      "multicall": "0x0dad5254cbe9965ff89fdb76d701a6505a721a11",
+      "multisend": "0x669bdDCd424E5B0FaA738B5A89aB28c199D9B443",
+      "rpcs": ["https://linea.decubate.com", "https://1rpc.io/linea", "https://rpc.linea.build"],
+      "scan": "https://lineascan.build/",
+      "decimal": 18,
+      "eip1559": 0,
+      "testnet": 0,
+      "network_type": "evm",
+      "l2": 0
+    },
+    {
+      "natives_symbol": "MATIC",
+      "name": "Polygon zkEVM",
+      "chain_id": 1101,
+      "icon": "https://res.mct.club/chain/svg/polygon-zkevm.svg",
+      "tokens": [],
+      "multicall": "0x78df9a9c1712946d615f051e96989a8e00190e68",
+      "multisend": "0xde27ceaff06de5ea9eac2856a3ba344c12ea966e",
+      "rpcs": ["https://zkevm-rpc.com", "https://rpc.ankr.com/polygon_zkevm", "https://1rpc.io/zkevm"],
+      "scan": "https://zkevm.polygonscan.com/",
+      "decimal": 18,
+      "eip1559": 0,
+      "testnet": 0,
+      "network_type": "evm",
+      "l2": 1
+    },
+   
+    {
+      "natives_symbol": "MATIC",
+      "name": "Polygon",
+      "chain_id": 137,
+      "icon": "https://res.mct.club/chain/svg/polygon.svg",
+      "tokens": [],
+      "multicall": "0x0e3759F34422e2261768Bb53bd7A0c7cD6eF2B38",
+      "multisend": "0xD49942f1378579Ff40ad801708AdDF7E02B46666",
+      "rpcs": [
+        "https://polygon-rpc.com",
+        "https://node.onekey.so/polygon",
+        "https://polygon-bor-rpc.publicnode.com",
+        "https://rpc-mainnet.matic.quiknode.pro",
+        "https://polygon.llamarpc.com",
+        "https://matic-mainnet.chainstacklabs.com",
+        "https://polygon.blockpi.network/v1/rpc/public",
+        "https://rpc.ankr.com/polygon"
+      ],
+      "scan": "https://polygonscan.com/",
+      "decimal": 18,
+      "eip1559": 1,
+      "testnet": 0,
+      "network_type": "evm",
+      "l2": 0
+    },
+    {
+      "natives_symbol": "ETH",
+      "name": "Scroll",
+      "chain_id": 534352,
+      "icon": "https://res.mct.club/chain/svg/scroll.svg",
+      "tokens": [],
+      "multicall": "0x2E3C69Ef5200f5Af11F0b543717185B42c24c8cc",
+      "multisend": "0x669bddcd424e5b0faa738b5a89ab28c199d9b443",
+      "rpcs": ["https://mainnet-rpc.scroll.io", "https://rpc.scroll.io", "https://scroll.blockpi.network/v1/rpc/public"],
+      "scan": "https://scrollscan.com/",
+      "decimal": 18,
+      "eip1559": 0,
+      "testnet": 0,
+      "network_type": "evm",
+      "l2": 1
+    },
+    {
+      "natives_symbol": "SOL",
+      "name": "Solana",
+      "chain_id": 0,
+      "icon": "https://res.mct.club/chain/png/solana.png",
+      "tokens": [],
+      "multicall": "",
+      "multisend": "more-to-more,more-to-one,batch-query-balance,one-to-more,token-sender",
+      "rpcs": ["https://rpc.ankr.com/solana", "https://solana-mainnet.phantom.tech"],
+      "scan": "https://solscan.io/",
+      "decimal": 0,
+      "eip1559": 0,
+      "testnet": 0,
+      "network_type": "solana",
+      "l2": 0
+    }
+    
+  ]
+}

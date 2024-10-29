@@ -1,0 +1,33 @@
+.HeaderNav {
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+.adm-nav-bar-right {
+  /* flex: inherit; */
+  display: flex;
+  justify-content: end;
+}
+.adm-nav-bar-left {
+  /* // flex: inherit; */
+}
+.adm-nav-bar-back {
+  display: none;
+}
+.adm-nav-b {
+  justify-content: space-between;
+}
+.border {
+  position: relative;
+}
+
+.border::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(146, 146, 146, 0.6);
+  transform: scaleY(0.5);
+}
