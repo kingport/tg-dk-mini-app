@@ -334,26 +334,6 @@ export const formatPublicKey = (key: string | undefined) => {
   return `${key.slice(0, 5)}...${key.slice(-3)}`;
 };
 
-// export async function getTokenInfo(connection: Connection, mintAddress: string) {
-//   const mintPublicKey = new PublicKey(mintAddress);
-
-//   // 使用 TokenListProvider 获取代币列表
-//   const tokenListProvider = new TokenListProvider();
-//   const tokenListContainer = await tokenListProvider.resolve();
-//   const tokenList = tokenListContainer.getList();
-
-//   // 查找代币信息
-//   const tokenInfo = tokenList.find((token: TokenInfo) => token.address === mintAddress);
-
-//   if (tokenInfo) {
-//     console.log('Token Name:', tokenInfo.name);
-//     console.log('Token Symbol:', tokenInfo.symbol);
-//     console.log('Token Decimals:', tokenInfo.decimals);
-//   } else {
-//     console.log('Token information not found in the registry.');
-//   }
-// }
-
 export const swapTokens = async (sdk, connection, CROESUDMint, pumpRecipientPublicKey, publicKey, buyAmountSol, signTransaction, sendTransaction, slippage = 3.5) => {
   // 获取链接钱包中的CROESU余额
   let currentSPLBalance = await getSPLBalance(connection, CROESUDMint, publicKey);

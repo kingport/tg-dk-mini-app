@@ -1,5 +1,4 @@
 import { Box, Button, Grid, GridItem, useDisclosure } from '@chakra-ui/react';
-import { Popup } from 'antd-mobile';
 import SvgIcon from '../SvgIcon';
 
 export interface ConnectButtonsTypes {
@@ -58,32 +57,30 @@ const ConnectButtons = (props: any, ref: any) => {
   ];
 
   return (
-    <Popup visible={isOpen} onMaskClick={handleClose} bodyStyle={{ height: '45vh' }}>
-      <Box width="100%" height="100%" bg="pageBgColor" p="20px" roundedTop={'20px'} overflow="scroll">
-        <Grid templateColumns="repeat(2, 1fr)" columnGap="14px" rowGap="14px">
-          {deepLinks.map((item, i) => (
-            <GridItem key={item.name} w="100%" h="52px">
-              <Button
-                key={item.name}
-                mt="20px"
-                width="100%"
-                height="52px"
-                bg="primaryAlpha.100"
-                color="primary"
-                justifyContent="start"
-                fontSize="14px"
-                onClick={() => window.open(item.link)}
-                _hover={{ bg: 'primaryAlpha.200' }}
-                _active={{ bg: 'primaryAlpha.200' }}
-                leftIcon={<SvgIcon name={item.icon} style={{ width: '24px', height: '24px' }} />}
-              >
-                {item.name}
-              </Button>
-            </GridItem>
-          ))}
-        </Grid>
-      </Box>
-    </Popup>
+    <Box width="100%" height="100%" bg="pageBgColor" p="20px" roundedTop={'20px'} overflow="scroll">
+      <Grid templateColumns="repeat(2, 1fr)" columnGap="14px" rowGap="14px">
+        {deepLinks.map((item, i) => (
+          <GridItem key={item.name} w="100%" h="52px">
+            <Button
+              key={item.name}
+              mt="20px"
+              width="100%"
+              height="52px"
+              bg="primaryAlpha.100"
+              color="primary"
+              justifyContent="start"
+              fontSize="14px"
+              onClick={() => window.open(item.link)}
+              _hover={{ bg: 'primaryAlpha.200' }}
+              _active={{ bg: 'primaryAlpha.200' }}
+              leftIcon={<SvgIcon name={item.icon} style={{ width: '24px', height: '24px' }} />}
+            >
+              {item.name}
+            </Button>
+          </GridItem>
+        ))}
+      </Grid>
+    </Box>
   );
 };
 

@@ -1,79 +1,79 @@
-@font-face {
-  font-family: 'HONORSansArabicUI';
-  src: url('@/styles/fonts/HONORSansArabicUI-L.ttf');
-  font-weight: 600;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'HONORSansArabicUI';
+//   src: url('@/styles/fonts/HONORSansArabicUI-L.ttf');
+//   font-weight: 600;
+//   font-style: normal;
+// }
 
-:root:root {
-  --adm-color-primary: #f1b71b;
-}
+// :root:root {
+//   --adm-color-primary: #f1b71b;
+// }
 
-html,
-body,
-#root {
-  min-height: 100vh;
-  margin: 0 auto;
-  width: 100%;
-}
-.content {
-  margin: 0 auto;
-  width: 100%;
-  height: calc(100vh - 56px);
-}
+// html,
+// body,
+// #root {
+//   min-height: 100vh;
+//   margin: 0 auto;
+//   width: 100%;
+// }
+// .content {
+//   margin: 0 auto;
+//   width: 100%;
+//   height: calc(100vh - 56px);
+// }
 
-body[data-scroll-locked] {
-  padding: 0 !important;
-}
+// body[data-scroll-locked] {
+//   padding: 0 !important;
+// }
 
-@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
-  /* 在此处添加针对iPhone 8竖屏的样式 */
-  .chakra-container {
-    // width: auto !important;
-    box-sizing: border-box !important;
-  }
-}
+// @media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+//   /* 在此处添加针对iPhone 8竖屏的样式 */
+//   .chakra-container {
+//     // width: auto !important;
+//     box-sizing: border-box !important;
+//   }
+// }
 
-@media only screen and (device-width: 667px) and (device-height: 375px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
-  /* 在此处添加针对iPhone 8横屏的样式 */
-  .chakra-container {
-    // width: auto !important;
-    box-sizing: border-box !important;
-  }
-}
+// @media only screen and (device-width: 667px) and (device-height: 375px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+//   /* 在此处添加针对iPhone 8横屏的样式 */
+//   .chakra-container {
+//     // width: auto !important;
+//     box-sizing: border-box !important;
+//   }
+// }
 
-.hiddenScroll {
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE 10+ */
-}
+// .hiddenScroll {
+//   scrollbar-width: none;
+//   /* Firefox */
+//   -ms-overflow-style: none;
+//   /* IE 10+ */
+// }
 
-.hiddenScroll::-webkit-scrollbar {
-  display: none;
-  /* Chrome Safari */
-}
+// .hiddenScroll::-webkit-scrollbar {
+//   display: none;
+//   /* Chrome Safari */
+// }
 
-/* 隐藏数字输入框的加减按钮 */
-input[type='number']::-webkit-outer-spin-button,
-input[type='number']::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+// /* 隐藏数字输入框的加减按钮 */
+// input[type='number']::-webkit-outer-spin-button,
+// input[type='number']::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
 
-/* 对火狐浏览器的处理 */
-input[type='number'] {
-  -moz-appearance: textfield;
-}
+// /* 对火狐浏览器的处理 */
+// input[type='number'] {
+//   -moz-appearance: textfield;
+// }
 
-.table-fixed-left {
-  position: sticky;
-  left: 0;
-  background-color: #1c1e28;
-}
+// .table-fixed-left {
+//   position: sticky;
+//   left: 0;
+//   background-color: #1c1e28;
+// }
 
-.table-fixed-right {
-  position: sticky;
-  right: 0;
-  background-color: #1c1e28;
-}
+// .table-fixed-right {
+//   position: sticky;
+//   right: 0;
+//   background-color: #1c1e28;
+// }

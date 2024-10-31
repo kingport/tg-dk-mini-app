@@ -22,23 +22,6 @@ export const rootRouter: RouteObject[] = [
     path: '/',
     element: lazyLoad(lazy(() => import('@/pages/home'))),
   },
-  {
-    path: '/sol/token/:mintToken',
-    element: lazyLoad(lazy(() => import('@/pages/sol'))),
-  },
-  {
-    path: '/more-to-one',
-    element: lazyLoad(lazy(() => import('@/pages/more-to-one'))),
-  },
-  {
-    path: '/token-sender',
-    element: lazyLoad(lazy(() => import('@/pages/token-sender'))),
-  },
-
-  {
-    path: '/solana/token-sender',
-    element: lazyLoad(lazy(() => import('@/pages/solana/token-sender'))),
-  },
   ...routerArray,
   {
     path: '*',

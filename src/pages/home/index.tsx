@@ -1,72 +1,77 @@
 import { Avatar, Box, Button, CircularProgress, Container, Divider, Flex, Grid, Heading, Image, Skeleton, Text, Wrap, WrapItem, useColorMode } from '@chakra-ui/react';
 import WebApp from '@twa-dev/sdk';
 import { OKXUniversalProvider } from '@okxconnect/universal-provider';
-import { OKXUniversalConnectUI, THEME } from '@okxconnect/ui';
+import { useBalance } from '@/hooks/useBalance';
 
 const Home = () => {
-  // const [okxUniversalProvider, setOkxUniversalProvider] = useState<OKXUniversalProvider | null>(null);
-  const [provider, setProvider] = useState<OKXUniversalProvider | null>(null);
+  const [provider, setProvider] = useState<any | null>(null);
   const [data, setData] = useState<any>(null);
-  const [universalUi, setUniversalUi] = useState<OKXUniversalConnectUI | null>(null);
+  const [publicKey, setPublicKey] = useState<any>(null);
+  const balance = useBalance(publicKey);
+  console.log(balance, 'balance===>余额');
 
-  const connectParams = {
-    namespaces: {
-      solana: {
-        chains: [
-          'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp', //solana mainnet
-          'solana:4uhcVJyU9pJkvQyS88uRDiswHXSCkY3z', //solana testnet
-          'sonic:4uhcVJyU9pJkvQyS88uRDiswHXSCkY3z', // sonic testnet
-        ],
-      },
-    },
-    sessionConfig: {
-      redirect: 'tg://resolve',
-    },
-  };
+  
 
-  const initSDK = async () => {
-    const provider = await OKXUniversalProvider.init({
+  
+
+  useEffect(() => {   
+    if(!WebApp) return;
+    OKXUniversalProvider.init({
       dappMetaData: {
         name: 'application name',
         icon: 'application icon url',
       },
+    }).then((provider) => {
+      alert(`suceess ${JSON.stringify(provider)}`);
+      setProvider(provider);
+      // setPublicKey(provider.getAccount().address)
+     
+    }).catch((error) => {
+      alert(`error ${JSON.stringify(error)}`);
     });
-    setProvider(provider);
+  }, [WebApp]);
 
-    const universalUi = await OKXUniversalConnectUI.init({
-      dappMetaData: {
-        icon: 'https://static.okx.com/cdn/assets/imgs/247/58E63FEA47A2B7D7.png',
-        name: 'OKX WalletConnect UI Demo',
-      },
-      actionsConfiguration: {
-        returnStrategy: 'tg://resolve',
-        modals: 'all',
-        tmaReturnUrl: 'back',
-      },
-      language: 'en_US',
-      uiPreferences: {
-        theme: THEME.LIGHT,
-      },
-    });
-    setUniversalUi(universalUi);
-  };
+  // provider?.on('connect', (data) => {
+  //   alert('connect')
+  // });
 
-  useEffect(() => {
-    initSDK();
-  }, []);
+  // provider?.on('disconnect', (data) => {
+  //   alert('disconnect')
+  // });
 
   return (
     <Box px={4} gap="4" pt={4} h="full" display="flex" flexDirection="column">
       <Button onClick={() => WebApp.showAlert(`Hello World! Current count is ${1}`)}>Show Alert</Button>
       <Button
-        onClick={async () => {
-          // alert('链接 OKX223');
-          await provider?.connect(connectParams);
+        onClick={() => {
+          const connectParams = {
+            namespaces: {
+              solana: {
+                chains: [
+                  'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp', //solana mainnet
+                ],
+              },
+            },
+            sessionConfig: {
+              redirect: 'tg://resolve',
+            },
+          };
+         provider?.connect(connectParams).then((data) => {
+          setData(data);
+         });
         }}
       >
-        链接 OKX223
+        OKX Wallet
       </Button>
-      <Box>{JSON.stringify(data)}</Box>
+      
+      <Box>{provider?.getAccount()?.address}</Box>
+      <Box border="1px solid"></Box>
+
+      <Box>{balance}</Box>
+      <Box border="1px solid"></Box>
+
+      <Box>1{JSON.stringify(data)}1</Box>
+      <Box>1{JSON.stringify(WebApp)}1</Box>
     </Box>
   );
 };

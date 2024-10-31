@@ -7,10 +7,6 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import path from 'path';
 import svgr from 'vite-plugin-svgr';
 import legacy from '@vitejs/plugin-legacy';
-// import mkcert from 'vite-plugin-mkcert';
-
-// const inject = require('@rollup/plugin-inject');
-// const esbuildShim = require.resolve('node-stdlib-browser/helpers/esbuild/shim');
 import nodePolyfills from 'vite-plugin-node-stdlib-browser';
 import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill';
 
@@ -77,11 +73,6 @@ export default async ({ command, mode }: ConfigEnv) => {
     },
     //服务
     // server: {
-    //   https: true, // 启用 HTTPS
-    //   // host: 'localhost', // 你可以根据需要更改主机
-    //   // port: 3000, // 你可以根据需要更改端口
-    // },
-    // server: {
     //   port: 5174,
     //   watch: {
     //     usePolling: true,
@@ -119,11 +110,11 @@ export default async ({ command, mode }: ConfigEnv) => {
       outDir: ['production'].includes(currentEnv.VITE_MODE) ? './bth-front-prod' : './bth-front',
       rollupOptions: {
         output: {
-          manualChunks(id) {
-            if (id.includes('antd-mobile')) {
-              return 'antd-mobile';
-            }
-          },
+          // manualChunks(id) {
+          //   if (id.includes('antd-mobile')) {
+          //     return 'antd-mobile';
+          //   }
+          // },
         },
       },
     },
